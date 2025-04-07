@@ -1,0 +1,74 @@
+project_id = "wmmitzjqwxiwiklqkonh"
+
+[api]
+enabled = true
+port = 54321
+swagger = true
+
+[db]
+port = 54322
+
+[studio]
+enabled = true
+port = 54323
+
+[inbucket]
+enabled = true
+port = 54324
+
+[storage]
+enabled = true
+
+[auth]
+enabled = true
+
+[realtime]
+enabled = true
+
+[functions.get-notifications]
+verify_jwt = true
+
+[functions.mark-notification-read]
+verify_jwt = true
+
+[functions.mark-all-notifications-read]
+verify_jwt = true
+
+[functions.get-profile]
+verify_jwt = true
+
+[functions.get-stylists]
+verify_jwt = true
+
+[functions.save-stylist]
+verify_jwt = true
+
+[functions.update-stylist]
+verify_jwt = true
+
+[functions.delete-stylist]
+verify_jwt = true
+
+[functions.send-whatsapp]
+verify_jwt = true
+
+[functions.get-booking-details]
+verify_jwt = true
+
+[functions.update-appointment-status]
+verify_jwt = true
+
+[functions.get-appointments]
+verify_jwt = true
+
+[functions.create-booking]
+verify_jwt = true
+
+[functions.delete-appointment]
+verify_jwt = true
+
+[functions.get-dashboard-stats]
+verify_jwt = true
+
+[functions.create-notification]
+verify_jwt = true

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 10%;
+    --foreground: 45 76% 83%;
+
+    --card: 0 0% 13%;
+    --card-foreground: 45 76% 83%;
+
+    --popover: 0 0% 13%;
+    --popover-foreground: 45 76% 83%;
+
+    --primary: 45 76% 52%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 45 76% 83%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 45 76% 52%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 45 76% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-cabbelero-black text-cabbelero-light font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .salon-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-cabbelero-gold text-cabbelero-black hover:bg-cabbelero-gold/90 transition-all duration-200 py-3 px-6 rounded-md font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-cabbelero-black border border-cabbelero-gold text-cabbelero-gold hover:bg-cabbelero-black/50 transition-all duration-200 py-3 px-6 rounded-md font-medium;
+  }
+  
+  .btn-outline {
+    @apply border border-cabbelero-gold text-cabbelero-gold hover:bg-cabbelero-gold hover:text-cabbelero-black transition-all duration-200 py-3 px-6 rounded-md font-medium;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-serif font-medium mb-6 text-cabbelero-gold;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-serif mb-10 text-cabbelero-light;
+  }
+  
+  .heading-accent {
+    @apply relative inline-block;
+  }
+  
+  .heading-accent::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-cabbelero-gold rounded-full -mb-1;
+  }
+  
+  .card-shadow {
+    @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .cabbelero-card {
+    @apply bg-cabbelero-gray border border-cabbelero-gold/20 rounded-lg p-4 hover:border-cabbelero-gold/60 transition-all;
+  }
+
+  .service-checkbox:checked + label {
+    @apply ring-2 ring-offset-2 ring-offset-cabbelero-black ring-cabbelero-gold scale-105;
+  }
+  
+  /* Light theme styles */
+  .light-theme {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 45 76% 52%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 45 76% 52%;
+
+    --radius: 0.5rem;
+  }
+  
+  .light-theme .bg-cabbelero-black {
+    @apply bg-white;
+  }
+  
+  .light-theme .bg-cabbelero-gray {
+    @apply bg-gray-100;
+  }
+  
+  .light-theme .text-cabbelero-light {
+    @apply text-gray-800;
+  }
+  
+  .light-theme .border-cabbelero-gold\/20 {
+    @apply border-gray-300;
+  }
+  
+  .light-theme .text-cabbelero-light\/50 {
+    @apply text-gray-500;
+  }
+  
+  .light-theme .text-cabbelero-light\/70 {
+    @apply text-gray-600;
+  }
+  
+  .light-theme .cabbelero-card {
+    @apply bg-white border border-gray-300 shadow-sm hover:border-cabbelero-gold hover:shadow;
+  }
+  
+  .light-theme-sidebar {
+    @apply bg-white border-r border-gray-200;
+  }
+  
+  .light-theme-sidebar .text-cabbelero-light {
+    @apply text-gray-800;
+  }
+  
+  .light-theme-sidebar .hover\:bg-cabbelero-black:hover {
+    @apply hover:bg-gray-100;
+  }
+}
